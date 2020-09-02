@@ -13,7 +13,7 @@ services:
     ports: 
       - lkbdport1:3306
       - lkbdport2:33060
-  rank-web: 
+  rank-web-lkbdname: 
     build: 
       context: ./ 
       dockerfile: rank-web.DockerFile 
