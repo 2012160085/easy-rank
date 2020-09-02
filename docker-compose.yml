@@ -6,10 +6,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always 
     environment: 
-      MYSQL_ROOT_PASSWORD: lkbrpwd 
+      MYSQL_ROOT_PASSWORD: dlrlqja0085! 
       MYSQL_DATABASE: rank 
-      MYSQL_USER: lkbuser
-      MYSQL_PASSWORD: lkbupwd
+      MYSQL_USER: jazz
+      MYSQL_PASSWORD: dlrlqja0085!
     ports: 
       - lkbdport:3306
   rank-web: 
