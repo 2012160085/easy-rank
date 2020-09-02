@@ -5,7 +5,7 @@
 $msg = '';
 echo $msg . '<br/>';
 
-$host = 'lkbdname';
+$host = 'rank-db-lkbdname';
 $user = 'jazz';
 $password = 'dlrlqja0085!';
 $db = 'rank';
