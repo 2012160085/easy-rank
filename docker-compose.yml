@@ -14,9 +14,7 @@ services:
       - lkbdport1:3306
       - lkbdport2:33060
   rank-web-lkbdname: 
-    build: 
-      context: ./ 
-      dockerfile: rank-web.DockerFile 
+    image: 0de8f89fc604
     container_name: rank-web-lkbdname
     depends_on: 
       - rank-db-lkbdname
