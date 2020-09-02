@@ -14,7 +14,9 @@ services:
       - lkbdport1:3306
       - lkbdport2:33060
   rank-web-lkbdname: 
-    image: 0de8f89fc604
+    build: 
+      context: ./ 
+      dockerfile: rank-web.DockerFile 
     container_name: rank-web-lkbdname
     depends_on: 
       - rank-db-lkbdname
@@ -22,4 +24,3 @@ services:
       - ./rank-web:/var/www/html/ 
     ports: 
       - lkbwport:80
-      
