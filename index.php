@@ -42,7 +42,7 @@ if($conn){
   </tr>
   <tr>
     <td class="tg-c3ow" colspan="2">instance name</td>
-    <td class="tg-c3ow" colspan="3">GRAVLIT</td>
+    <td class="tg-c3ow" colspan="3">lkbdname</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">rank options</td>
