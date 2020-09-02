@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: dlrlqja0085!
     ports: 
       - lkbdport1:3306
-      - lkbdport2:33060
+      - lkbdport10:33060
   rank-web-lkbdname: 
     build: 
       context: ./ 
