@@ -11,7 +11,8 @@ services:
       MYSQL_USER: jazz
       MYSQL_PASSWORD: dlrlqja0085!
     ports: 
-      - lkbdport:3306
+      - lkbdport1:3306
+      - lkbdport2:33060
   rank-web: 
     build: 
       context: ./ 
