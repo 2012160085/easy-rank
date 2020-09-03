@@ -1,15 +1,14 @@
+
 <html>
 <head>
 </head>
 <?php
+require_once './conf.php'
 $msg = '';
 echo $msg . '<br/>';
-
-$host = 'rank-db-lkbdname';
-$user = 'jazz';
-$password = 'dlrlqja0085!';
-$db = 'rank';
-$conn = new mysqli($host, $user, $password, $db);
+$dbsetting = new ConnectionSettings;
+$conn = $dbsetting->connect();
+	
 
 $dbmsg = '';
 if($conn){
