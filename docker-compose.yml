@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  rank-db-${GAME_NAME}: 
-    container_name: rank-db-${GAME_NAME}
+  db: 
+    container_name: rank-db-${COMPOSE_PROJECT_NAME}
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     restart: always 
@@ -13,13 +13,13 @@ services:
     ports: 
       - ${MYSQL_PORT_CLASSIC}:3306
       - ${MYSQL_PORT_X}:33060
-  rank-web-${GAME_NAME}: 
+  web: 
     build: 
       context: ./ 
       dockerfile: rank-web.DockerFile 
-    container_name: rank-web-${GAME_NAME}
+    container_name: rank-web-${COMPOSE_PROJECT_NAME}
     depends_on: 
-      - rank-db-${GAME_NAME}
+      - db
     volumes: 
       - ./rank-web:/var/www/html/ 
     ports: 
