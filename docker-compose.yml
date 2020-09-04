@@ -1,26 +1,26 @@
 version: '3.3'
 services:
-  rank-db-lkbdname: 
-    container_name: rank-db-lkbdname
+  rank-db-${GAME_NAME}: 
+    container_name: rank-db-${GAME_NAME}
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     restart: always 
     environment: 
-      MYSQL_ROOT_PASSWORD: dlrlqja0085! 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} 
       MYSQL_DATABASE: rank 
-      MYSQL_USER: jazz
-      MYSQL_PASSWORD: dlrlqja0085!
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports: 
-      - lkbdport1:3306
-      - lkbdport10:33060
-  rank-web-lkbdname: 
+      - ${MYSQL_PORT_CLASSIC}:3306
+      - ${MYSQL_PORT_X}:33060
+  rank-web-${GAME_NAME}: 
     build: 
       context: ./ 
       dockerfile: rank-web.DockerFile 
-    container_name: rank-web-lkbdname
+    container_name: rank-web-${GAME_NAME}
     depends_on: 
-      - rank-db-lkbdname
+      - rank-db-${GAME_NAME}
     volumes: 
       - ./rank-web:/var/www/html/ 
     ports: 
-      - lkbwport:80
+      - ${APACHE_PORT}:80
