@@ -1,2 +1,2 @@
 # pixter-rank
-simple rank system repository for docker
+build rank server as docker container
