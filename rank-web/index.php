@@ -3,11 +3,9 @@
 <head>
 </head>
 <?php
-require_once './conf.php'
-$msg = '';
-echo $msg . '<br/>';
-$dbsetting = new ConnectionSettings;
-$conn = $dbsetting->connect();
+	
+$config = parse_ini_file('app.ini'); 
+$conn = mysqli_connect($config->DB_NAME,$config->DB_USR,$config->DB_PASSWORD,$config->DB_DATABASE);
 	
 
 $dbmsg = '';
