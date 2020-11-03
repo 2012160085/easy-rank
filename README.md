@@ -2,4 +2,4 @@
 build rank server as docker container
 
 ### Usage
-pull git, run sh
+Install docker, pull git, run sh
